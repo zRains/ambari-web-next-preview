@@ -1,0 +1,37 @@
+{
+  "name": "@ambari-web-next/web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
+    "*.{css}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@react-hookz/web": "github:react-hookz/web",
+    "@tabler/icons-react": "^3.33.0",
+    "clsx": "^2.1.1",
+    "i18next-browser-languagedetector": "^8.1.0",
+    "immer": "^10.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-i18next": "^15.5.1",
+    "zustand": "^5.0.4",
+    "@ambari-web-next/ui-shared": "workspace:^",
+    "@ambari-web-next/utils-shared": "workspace:^"
+  },
+  "devDependencies": {
+    "lint-staged": "^16.0.0"
+  }
+}

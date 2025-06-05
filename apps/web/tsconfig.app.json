@@ -26,7 +26,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@ambari-web-next/utils-shared": ["../utils-shared/lib/index.ts"]
+      "@ambari-web-next/utils-shared": ["../../packages/utils-shared/lib/index.ts"]
     }
   },
   "include": ["src"]

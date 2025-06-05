@@ -82,11 +82,57 @@ importers:
         specifier: ^3.1.4
         version: 3.1.4(@types/node@22.15.19)
 
-  packages/admin:
+  apps/admin:
     dependencies:
+      '@ambari-web-next/ui-shared':
+        specifier: workspace:^
+        version: link:../../packages/ui-shared
+      '@ambari-web-next/utils-shared':
+        specifier: workspace:^
+        version: link:../../packages/utils-shared
       '@react-hookz/web':
         specifier: github:react-hookz/web
-        version: github.com/react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa(react-dom@19.1.0)(react@19.1.0)
+        version: git@github.com+react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa(react-dom@19.1.0)(react@19.1.0)
+      '@tabler/icons-react':
+        specifier: ^3.33.0
+        version: 3.33.0(react@19.1.0)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      i18next-browser-languagedetector:
+        specifier: ^8.1.0
+        version: 8.1.0
+      immer:
+        specifier: ^10.1.1
+        version: 10.1.1
+      react:
+        specifier: ^19.1.0
+        version: 19.1.0
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.1.0(react@19.1.0)
+      react-i18next:
+        specifier: ^15.5.1
+        version: 15.5.1(i18next@25.2.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.8.3)
+      zustand:
+        specifier: ^5.0.4
+        version: 5.0.4(@types/react@19.1.4)(immer@10.1.1)(react@19.1.0)
+    devDependencies:
+      lint-staged:
+        specifier: ^16.0.0
+        version: 16.0.0
+
+  apps/web:
+    dependencies:
+      '@ambari-web-next/ui-shared':
+        specifier: workspace:^
+        version: link:../../packages/ui-shared
+      '@ambari-web-next/utils-shared':
+        specifier: workspace:^
+        version: link:../../packages/utils-shared
+      '@react-hookz/web':
+        specifier: github:react-hookz/web
+        version: git@github.com+react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa(react-dom@19.1.0)(react@19.1.0)
       '@tabler/icons-react':
         specifier: ^3.33.0
         version: 3.33.0(react@19.1.0)
@@ -164,46 +210,6 @@ importers:
       vite-plugin-dts:
         specifier: ^4.5.4
         version: 4.5.4(@types/node@22.15.19)(typescript@5.8.3)(vite@6.3.5)
-
-  packages/web:
-    dependencies:
-      '@ambari-web-next/ui-shared':
-        specifier: workspace:^
-        version: link:../ui-shared
-      '@ambari-web-next/utils-shared':
-        specifier: workspace:^
-        version: link:../utils-shared
-      '@react-hookz/web':
-        specifier: github:react-hookz/web
-        version: github.com/react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa(react-dom@19.1.0)(react@19.1.0)
-      '@tabler/icons-react':
-        specifier: ^3.33.0
-        version: 3.33.0(react@19.1.0)
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      i18next-browser-languagedetector:
-        specifier: ^8.1.0
-        version: 8.1.0
-      immer:
-        specifier: ^10.1.1
-        version: 10.1.1
-      react:
-        specifier: ^19.1.0
-        version: 19.1.0
-      react-dom:
-        specifier: ^19.1.0
-        version: 19.1.0(react@19.1.0)
-      react-i18next:
-        specifier: ^15.5.1
-        version: 15.5.1(i18next@25.2.0)(react-dom@19.1.0)(react@19.1.0)(typescript@5.8.3)
-      zustand:
-        specifier: ^5.0.4
-        version: 5.0.4(@types/react@19.1.4)(immer@10.1.1)(react@19.1.0)
-    devDependencies:
-      lint-staged:
-        specifier: ^16.0.0
-        version: 16.0.0
 
 packages:
 
@@ -4092,9 +4098,9 @@ packages:
       react: 19.1.0
     dev: false
 
-  github.com/react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa(react-dom@19.1.0)(react@19.1.0):
-    resolution: {tarball: https://codeload.github.com/react-hookz/web/tar.gz/5cf93f2472b6bae8dd039090e8ed5dd35c857efa}
-    id: github.com/react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa
+  git@github.com+react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa(react-dom@19.1.0)(react@19.1.0):
+    resolution: {commit: 5cf93f2472b6bae8dd039090e8ed5dd35c857efa, repo: git@github.com:react-hookz/web.git, type: git}
+    id: git@github.com+react-hookz/web/5cf93f2472b6bae8dd039090e8ed5dd35c857efa
     name: '@react-hookz/web'
     version: 24.0.4
     engines: {node: '>=18.0.0'}

@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve('./src'),
-      '@ambari-web-next/utils-shared': path.resolve(__dirname, '../utils-shared/lib/index.ts'),
+      '@ambari-web-next/utils-shared': path.resolve(__dirname, '../../packages/utils-shared/lib/index.ts'),
       '@tabler/icons-react': '@tabler/icons-react/dist/esm/icons/index.mjs',
     },
   },

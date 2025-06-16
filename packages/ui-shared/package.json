@@ -10,17 +10,9 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./alert": {
-      "import": "./dist/components/ui/alert.js",
-      "types": "./dist/components/ui/alert.d.ts"
-    },
-    "./button": {
-      "import": "./dist/components/ui/button.js",
-      "types": "./dist/components/ui/button.d.ts"
-    },
-    "./checkbox": {
-      "import": "./dist/components/ui/checkbox.js",
-      "types": "./dist/components/ui/checkbox.d.ts"
+    "./Button": {
+      "import": "./dist/lib/ui/Button.js",
+      "types": "./dist/lib/ui/Button.d.ts"
     }
   },
   "scripts": {
@@ -28,20 +20,19 @@
     "build": "tsc --p ./tsconfig.json && vite build"
   },
   "dependencies": {
-    "@radix-ui/react-checkbox": "^1.3.1",
-    "@radix-ui/react-slot": "^1.2.2",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.511.0",
-    "tailwind-merge": "^3.3.0"
+    "clsx": "^2.1.1"
   },
   "devDependencies": {
     "glob": "^11.0.2",
     "tw-animate-css": "^1.3.0",
-    "vite-plugin-dts": "^4.5.4"
+    "vite-plugin-dts": "^4.5.4",
+    "bootstrap": "^5.3.6",
+    "react-bootstrap": "^2.10.10"
   },
   "peerDependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "bootstrap": "^5.3.6",
+    "react-bootstrap": "^2.10.10"
   }
 }
